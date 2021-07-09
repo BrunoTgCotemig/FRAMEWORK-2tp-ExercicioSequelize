@@ -1,5 +1,16 @@
 # Trabalho de Sequelize
 
+
+
+## **Participantes**
+
+ * Bruno Teles Galvão
+ * Lucas Abdalgne
+
+
+
+# Instruções
+
 Trabalho em trio, dupla ou solo. 
 
 A ideia desse trabalho é entender como funciona o sequelize e os metodos que ele implementa.
