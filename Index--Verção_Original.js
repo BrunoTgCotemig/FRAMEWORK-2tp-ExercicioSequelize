@@ -1,15 +1,5 @@
-//  npm install sequelize --save
-//  npm install mysql2 --save
-//  npm install sequelize-cli -g
-
-// Ter um servidor rodando o banco de dados mysql (Wamp, et cetera)
-
-
-
-// pt 1
-//
-// Instancialização do sequelize & configuração
-//
+// para rodar o projeto
+// primeiro npm install e depois npm run start
 
 const { Sequelize, DataTypes } = require("sequelize");
 const fs = require("fs");
@@ -17,8 +7,8 @@ const path = require("path");
 
 // configirando conexão sqlite
 const Sequelize_ConnectionVar = new Sequelize({
-    dialect: "sqlite", // Define qual o tipo de banco de dados usado
-    storage: "./db.sqlite"  // Define onde está o banco de dados
+    dialect: "sqlite",
+    storage: "./db.sqlite"
 });
 
 // validar conexão com o arquivo e se ela existir conectar
@@ -32,15 +22,6 @@ Sequelize_ConnectionVar.authenticate()
         await start();
     });
 
-// pt 1 --End
-
-
-
-
-
-
-
-
 
 
 //
@@ -48,22 +29,16 @@ Sequelize_ConnectionVar.authenticate()
 //
 
 
-// criar um modelo
-//  **  Modelo também pode ser criado em um arquivo separado
 
+
+
+// criar um modelo
 const model = Sequelize_ConnectionVar.define("UserModel", {
     name: {
-        type: DataTypes.TEXT, // Em tese, eu teria que colocar essa "variavel" como o tipo dos termos a seguir?
-        name: DataTypes.STRING,
-        nickname: DataTypes.STRING,
-        born_date: DataTypes.TIME,
+        type: DataTypes.TEXT,
         allowNull: false
     }
-    //
-    // TODO: definir os atributos
-    //
-    // STATUS: PRONTO
-    // 
+    // TODO: definir os atributos 
 }, {
     // configurando a tabela
     timestamps: false, // não estamos usando os campos createdAt, updatedAt
