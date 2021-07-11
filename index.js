@@ -53,17 +53,27 @@ Sequelize_ConnectionVar.authenticate()
 
 const model = Sequelize_ConnectionVar.define("UserModel", {
     name: {
-        type: DataTypes.TEXT, // Em tese, eu teria que colocar essa "variavel" como o tipo dos termos a seguir?
-        name: DataTypes.STRING,
-        nickname: DataTypes.STRING,
-        born_date: DataTypes.TIME,
-        allowNull: false
+        type: DataTypes.TEXT,
+
+        allowNull: false,
+        autoIncrement: true
+    },
+    born_date: {
+        type: DataTypes.DATE,
+
+        allowNull: false,
+        autoIncrement: true
+    },
+    nickname: {
+        type: DataTypes.TEXT,
+
+        allowNull: false,
+        autoIncrement: true
     }
-    //
+
+
     // TODO: definir os atributos
-    //
-    // STATUS: PRONTO
-    // 
+
 }, {
     // configurando a tabela
     timestamps: false, // não estamos usando os campos createdAt, updatedAt
