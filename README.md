@@ -21,4 +21,4 @@ Implemente os pontos faltantes de acordo com a entendidade no arquivo "script.sq
 Requisitos:
     - Nomes dos integrantes;
     - Arquivo zip ou github com a resolução;
-    - Video com até 5 min. explicando o funcionamento;
+
